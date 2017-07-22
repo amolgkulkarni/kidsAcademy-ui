@@ -1,0 +1,13 @@
+.school-banner {
+    background: url(/assets/images/school-banner.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+ .school-banner .title, .school-banner .description{
+     text-align: left;
+ }
+.announcement {
+    text-align: center;
+    border-top: solid #ccc 1px;
+}
+/deep/ app-school div.vertical {width: 30% !important;}

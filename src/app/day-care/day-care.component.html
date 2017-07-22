@@ -1,0 +1,15 @@
+<div class="tab-content">
+  <div class="daycare-banner banner">
+  <h2 class="title">Kids Academy</h2>
+  <h4 class="description">Welcome to Gayatri Daycare and Sanskar Kendra
+  <p>Live the music</p></h4>
+  <div class="bottom-mask"></div>
+  </div>
+  <div [@fadeInAnimation]>
+  
+  <div class="separator-title form-control">
+    <h2><span>Activities</span></h2>
+  </div>
+  <app-thumbnail *ngFor="let thumbnail of thumbnails;" [name]="thumbnail.href" [thumbnail]="thumbnail"></app-thumbnail>
+  </div>
+</div>

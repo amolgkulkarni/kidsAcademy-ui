@@ -1,0 +1,17 @@
+.form-control{padding-bottom: 20px;}
+.form-control.error::after{ content: "*"; color: red; width:10px;}
+.form-control input, .form-control p, .form-control span, .form-control div, .form-control label, .form-control textarea, .form-control button  {
+    padding: 10px;
+    margin: 5px 10px;
+    width: 80%;
+}
+
+.form-control.title{padding-bottom: 10px; border-bottom: 1px solid #ccc;margin-right: 10%;}
+.form-control.title label{ font-weight: 700; font-size: 1.25em;}
+
+.form-control.info span, .form-control.select span{width: auto; max-width: 40%; overflow: hidden; font-weight: 700; display: inline;}
+.form-control.info p, .form-control.select select{display: inline-block; width: 50%; height: 100%;}
+
+.form-control.info {padding-bottom: 0;}
+.form-control.info p {margin-left: 0; padding-left: 0;}
+.form-control.action button{width: 85%;}

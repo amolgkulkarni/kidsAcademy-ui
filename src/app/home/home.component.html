@@ -1,0 +1,9 @@
+<div [@fadeInAnimation] class="tab-content">
+  <div class="home-banner banner">
+  <h2 class="title">Kids Academy</h2>
+  <h4 class="description">Welcome to Kids Academy Pune
+  <p>Please choose a centre below.</p></h4>
+  </div>
+  <!--app-thumbnail *ngFor="let thumbnail of thumbnails; let even = even; trackBy: trackThumbnails" [name]="thumbnail.href" [thumbnail]="thumbnail"></app-thumbnail-->
+  <app-thumbnail *ngFor="let thumbnail of thumbnails;" [name]="thumbnail.href" [thumbnail]="thumbnail"></app-thumbnail>
+</div>

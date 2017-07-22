@@ -1,0 +1,22 @@
+div .description {height: 100px; overflow-y: auto;}
+div img {cursor: pointer;}
+
+div.vertical {display:inline-block; padding: 20px; width: 20%; vertical-align: text-top;}
+div.vertical img {width: 200px; height:200px;border-radius: 100px; display: block; margin-left: auto; margin-right: auto;}
+div.vertical p {text-align: center;}
+div.vertical .title {font-weight: bold;}
+div.vertical .description {height: auto;}
+
+div.horizontal {display:inline-block; padding: 20px; width: calc(100% - 40px); vertical-align: text-top;}
+div.horizontal img {width: 40%; height:200px; display: block; float: left; padding: 20px;}
+div.horizontal p {float: left; width: 40%; text-align: center; padding: 20px; margin: 0;}
+div.horizontal .title {font-weight: bold;}
+div.horizontal .description {text-align: start;}
+
+div.horizontal.right img, div.horizontal.right p {float: right;}
+div.horizontal.right .description {text-align: end;} 
+
+
+div.overlay {display:inline-block; margin: 20px; width: calc(50% - 42px); height: 200px; vertical-align: text-top; background-size: cover !important; cursor: pointer; background-repeat: round;}
+div.overlay p {text-align: center; color: whitesmoke;}
+div.overlay .title {font-weight: bold; margin-top: 60px;}

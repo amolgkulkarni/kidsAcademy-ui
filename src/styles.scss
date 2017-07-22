@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+body {margin: 0; background: url(/assets/images/background.jpeg); background-size: cover; font-family: fantasy;}
+.tab-content {
+    margin-top: 0px; overflow-y: auto;
+    margin-bottom: 50px;
+}
+.banner {
+    z-index: 2;
+    background: url(/assets/images/home-banner.jpg);
+    height: 260px;
+    padding: 30px;
+    position: relative;
+    background-size: cover;
+}
+.banner .title{
+    height: 40px;
+    margin: 0 30px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+
+}
+.banner .description{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.5em;
+}
+.banner .description p {font-size: smaller;}
+
+.hide{display: none;}
+.mc-left {float: left; display: inline-block;}
+.mc-right {float:right; display: inline-block;}
+.md-col-50 {width: 50%;}
+
+.separator-title{
+    height: 60px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.separator-title h2 {color: #7e54c6; display: flex; text-align: center; font-weight: bold; width: 100%;}
+.separator-title h2 span{ width: auto; max-width: 30%;font-family: cursive;}
+.separator-title h2::before {
+    background: currentColor;
+    height: 1px;
+    top: 0.75em;
+    position: relative;
+    display: block;
+    margin: -1px 20px 0 20px;
+    content:"";
+    width: 45%;
+}
+.separator-title h2::after {
+    background: currentColor;
+    height: 1px;
+    top: 0.75em;
+    position: relative;
+    display: block;
+    margin: -1px 20px 0 20px;
+    content:"";
+    width: 25%;
+    float: right;
+}
+
+.bottom-mask{
+    text-align: right;
+    background-color: #000000;
+    height: 66px;
+    opacity: 0.22;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+.bottom-links {
+    position: absolute;
+    right: 30px;
+    bottom: 22px;
+}
+button {border-radius: 12px; background: #7e54c6; color: white;padding: 6px 29px; border-color: blueviolet;border-width: 1px; outline: 0px;}
+
+p.about{width: 75%; text-align: center; margin: auto; margin-bottom: 10px;}

@@ -1,0 +1,10 @@
+.tab-content {margin-top: 60px;}
+.daycare-banner {
+    background: url(/assets/images/daycare-banner.jpg);
+    background-size: cover;
+    background-repeat: round;
+    z-index: 0;
+    color: white;
+}
+
+/deep/ app-day-care div.vertical {width: 30% !important;}

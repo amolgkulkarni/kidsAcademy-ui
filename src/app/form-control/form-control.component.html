@@ -1,0 +1,21 @@
+  <div *ngIf="mode == 'title'" [class]="'form-control ' + mode + css_class"><label>{{header}}</label></div>
+
+  <div *ngIf="mode == 'description'" [class]="'form-control ' + mode + css_class"><p>{{placeholder}}</p></div>
+
+  <div *ngIf="mode == 'select'" [class]="'form-control ' + mode + css_class">
+    <span>{{header}}</span><select (change)="validate($event)" [(ngModel)]="value">
+      <option *ngFor = "let li of options.split(',');" [value]="li">{{li}}</option>
+    </select></div>
+
+  <div *ngIf="mode == 'list'" [class]="'form-control ' + mode + css_class">
+    <p *ngFor = "let li of options.split(',')">{{li}}</p></div>
+
+  <div *ngIf="mode == 'textarea'" [class]="'form-control ' + mode + css_class">
+    <textarea [placeholder]="placeholder" (change)="validate($event)" [(ngModel)]="value"></textarea></div>
+
+  <div *ngIf="mode == 'text' || mode == 'number' || mode == 'email'" [class]="'form-control ' + mode + css_class">
+    <input [placeholder]="placeholder" value="" (change)="validate($event)" (keyup)="validate();" (paste)="validate();" (input)="validate();" [(ngModel)]="value"></div>
+
+  <div *ngIf="mode == 'action'" [class]="'form-control ' + mode + css_class"><button (click)="onSubmit($event)">{{placeholder}}</button></div>
+
+  <div *ngIf="mode == 'info'" [class]="'form-control ' + mode + css_class"><span>{{header}}</span><p>{{description}}</p></div>

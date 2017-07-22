@@ -1,0 +1,68 @@
+<div class="tab-content">
+  <div class="music-banner banner">
+    <h2 class="title">Kids Academy</h2>
+    <h4 class="description">Welcome to Brahamanaad Music Academy
+      <p>Live the music</p>
+    </h4>
+    <div class="bottom-mask"></div>
+    <div class="bottom-links">
+      <button (click)="navigateTo('home')">Home</button>
+      <button *ngIf="state == 'home'" (click)="switchTo('about')">About us</button>
+      <button *ngIf="state == 'home'" (click)="switchTo('gallery')">Gallery</button>
+      <button *ngIf="state == 'home'" (click)="navigateTo('contact')">Contact</button>
+      <button *ngIf="state !== 'home'" (click)="switchTo('home')">Back</button>
+    </div>
+  </div>
+  <div *ngIf="state == 'home'" [@fadeInAnimation]>
+    <app-ticker [text]="ticker"></app-ticker>
+    <div class="separator-title form-control">
+      <h2><span>Available courses</span></h2>
+    </div>
+
+    <app-thumbnail *ngFor="let thumbnail of thumbnails;" [name]="thumbnail.href" [thumbnail]="thumbnail"></app-thumbnail>
+
+    <div class="separator-title form-control">
+      <h2><span>Branches</span></h2>
+    </div>
+
+    <form-control mode="info" header="Branch 1:" description=" Anandnagar, Sinhagad Road, Pune- 51"></form-control>
+    <form-control mode="info" header="Branch 2:" description=" Raikar Mala, Dhayri, Pune- 41"></form-control>
+    <form-control mode="info" header="Branch 3:" description=" Raikar Nagar, Dhayri Road, Pune- 41"></form-control>
+    <form-control mode="info" header="Branch 4:" description=" Narhe, Bengaluru Bypass, Pune- 41"></form-control>
+
+  </div>
+
+  <div *ngIf="state == 'about'" [@fadeInAnimation]>
+    <div class="separator-title form-control">
+      <h2><span> Approach </span></h2>
+    </div>
+    <p class="about">ABC Montessori has adopted the Montessori methodology bestowed upon the world by one of the leading advocates of Early
+      Childhood Education for educating and nurturing young children. It is a proven fact that 50% of child’s adult intelligence
+      and 90% of adult brain patterns are developed in first five years of age. </p>
+    <p class="about">The Montessori concept helps the child in these most crucial formative years. The concept is based on the fact that every
+      child has unique capabilities and pace of learning. It endorses the fact that children are always eager to explore
+      new things and learn and master new skills.</p>
+
+    <div class="separator-title form-control">
+      <h2><span>Memberships</span></h2>
+    </div>
+
+    <p class="about">The International Montessori Council, USA</p>
+    <p class="about">The American Montessori Society, USA</p>
+  </div>
+
+  <div *ngIf="state == 'gallery'" [@fadeInAnimation]>
+    <div class="separator-title form-control">
+      <h2><span>Events</span></h2>
+    </div>
+    <app-thumbnail *ngFor="let thumbnail of eventGallery" [thumbnail]="thumbnail"></app-thumbnail>
+
+    <div class="separator-title form-control">
+      <h2><span>Gallery</span></h2>
+    </div>
+    <app-thumbnail *ngFor="let thumbnail of gallery" [thumbnail]="thumbnail"></app-thumbnail>
+
+  </div>
+
+
+</div>

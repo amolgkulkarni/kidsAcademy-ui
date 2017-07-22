@@ -1,0 +1,12 @@
+<div *ngIf = "thumbnail.mode != 'overlay'; else elseBlock" [class]="thumbnail.mode || 'vertical'">
+  <img *ngIf = "thumbnail.mode != 'overlay'" [src] = thumbnail.src (click)="navigateTo($event)">
+  <p class="title">{{thumbnail.title}}</p>
+  <p class="description">{{thumbnail.description}}</p>
+</div>
+  <ng-template #elseBlock>
+    <div [class]="thumbnail.mode" [ngStyle]="{'background': 'url(' +thumbnail.src + ')'}">
+      <p class="title">{{thumbnail.title}}</p>
+      <p class="description">{{thumbnail.description}}</p>
+    </div>
+    </ng-template>
+

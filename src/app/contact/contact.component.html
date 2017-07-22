@@ -1,0 +1,34 @@
+<div [@fadeInAnimation] class="tab-content">
+  <div class="separator-title form-control">
+    <h2><span>Contact Us</span></h2>
+  </div>
+  <div class="mc-left md-col-50">
+    <form-control mode="title" header="Drop us a line!"></form-control>
+    <form-control name="name" mode="text" placeholder="Name"></form-control>
+    <form-control name="center" mode="select" header="Interested In:" options="ABC Montessori, Brahmanaad, Gayatri"></form-control>
+    <form-control name="email" mode="email" placeholder="Email*" required='true'></form-control>
+    <form-control name="message" mode="textarea" placeholder="Message"></form-control>
+    <form-control mode="action" placeholder="SEND" (submit)="sendMail($event)"></form-control>
+    <br>
+    <div class="separator-title form-control">
+      <h2><span>Call Us</span></h2>
+    </div>
+    <form-control mode="info" header="ABC Montessori:" description=" +91 1234567890"></form-control>
+    <form-control mode="info" header="Brahamanaad Music Academy:" description=" +91 9876543210"></form-control>
+    <form-control mode="info" header="Gayatri Day Care:" description=" +91 1234512345"></form-control>
+  </div>
+  <div class="mc-left md-col-50">
+    <form-control mode="title" header="Even Better, See us in person!"></form-control>
+    <form-control mode="description" placeholder="We love our customers, so feel free to visit during normal business hours."></form-control>
+    <br>
+    <form-control mode="title" header="ABC Montessori, Gayatri - Dhayari"></form-control>
+    <form-control mode="info" description="Nana Raikar chowk, Raikar Mala, Dhayari, Pune-411041"></form-control>
+    <form-control mode="title" header="Brahmanaad Music Academy - Dhayari"></form-control>
+    <form-control mode="info" description="Nana Raikar chowk, Raikar Mala, Dhayari, Pune-411041"></form-control>
+    <form-control mode="title" header="Brahmanaad Music Academy - Anandnagar"></form-control>
+    <form-control mode="info" description="Anurav, Varshanand Society, Near Santosh Hall, Anandnagar, Pune-411051"></form-control>
+    <br>
+    <form-control mode="title" header="Hours"></form-control>
+    <form-control mode="list" options="Monday - Friday: 9AM - 1 PM, Saturday: By Appointment, Sunday: Closed"></form-control>
+  </div>
+</div>

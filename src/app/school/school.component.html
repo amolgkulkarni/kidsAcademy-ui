@@ -1,0 +1,67 @@
+<div class="tab-content">
+  <div class="school-banner banner">
+    <h2 class="title">Kids Academy</h2>
+    <h4 class="description">Welcome to ABC Montessori Pune
+      <p>An American Pre School Chain.</p>
+    </h4>
+    <div class="bottom-mask"></div>
+    <div class="bottom-links">
+      <button (click)="navigateTo('home')">Home</button>
+      <button *ngIf="state == 'home'" (click)="switchTo('about')">About us</button>
+      <button *ngIf="state == 'home'" (click)="switchTo('gallery')">Gallery</button>
+      <button *ngIf="state == 'home'" (click)="navigateTo('contact')">Contact</button>
+      <button *ngIf="state !== 'home'" (click)="switchTo('home')">Back</button>
+    </div>
+  </div>
+
+  <div *ngIf="state == 'home'" [@fadeInAnimation]>
+    <div class="separator-title form-control">
+      <h2><span>The Philosophy</span></h2>
+    </div>
+    <form-control mode="list" options="Treats every child with respect, Provides clarity of direction, Provide a programme of holistic development, Provides evaluation that empowers & inspires., Cooperation not competition."></form-control>
+
+    <div class="separator-title form-control">
+      <h2><span>Subjects</span></h2>
+    </div>
+    <app-thumbnail *ngFor="let thumbnail of thumbnails" [thumbnail]="thumbnail"></app-thumbnail>
+
+    <div class="announcement">
+      <h2 class="title">Thanks for visiting!</h2>
+      <h4>Watch this space for updates.</h4>
+    </div>
+  </div>
+
+  <div *ngIf="state == 'about'" [@fadeInAnimation]>
+    <div class="separator-title form-control">
+      <h2><span> Approach </span></h2>
+    </div>
+    <p class="about">ABC Montessori has adopted the Montessori methodology bestowed upon the world by one of the leading advocates of Early
+      Childhood Education for educating and nurturing young children. It is a proven fact that 50% of child’s adult intelligence
+      and 90% of adult brain patterns are developed in first five years of age. </p>
+      <p class = "about">The Montessori concept helps the child in
+      these most crucial formative years. The concept is based on the fact that every child has unique capabilities and pace
+      of learning. It endorses the fact that children are always eager to explore new things and learn and master new skills.</p>
+
+    <div class="separator-title form-control">
+      <h2><span>Memberships</span></h2>
+    </div>
+
+    <p class="about">The International Montessori Council, USA</p>
+    <p class="about">The American Montessori Society, USA</p>
+  </div>
+
+  <div *ngIf="state == 'gallery'" [@fadeInAnimation]>
+    <div class="separator-title form-control">
+      <h2><span>Material</span></h2>
+    </div>
+    <app-thumbnail *ngFor="let thumbnail of materialGallery" [thumbnail]="thumbnail"></app-thumbnail>
+
+    <div class="separator-title form-control">
+      <h2><span>Events</span></h2>
+    </div>
+    <app-thumbnail *ngFor="let thumbnail of gallery" [thumbnail]="thumbnail"></app-thumbnail>
+
+
+  </div>
+
+</div>
