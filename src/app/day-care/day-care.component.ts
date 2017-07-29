@@ -11,12 +11,14 @@ import { ThumbnailComponent } from './../thumbnail/thumbnail.component';
 })
 export class DayCareComponent implements OnInit {
 
-  public thumbnails: Array<any> = [{ mode: "vertical", src: "assets/images/stationary", title: "Drawing", description: "Classical Music and Ragas." },
-  { mode: "vertical", src: "assets/images/colors", title: "Indian Games", description: "An American Preschool chain." },
-  { mode: "vertical", src: "assets/images/crayons", title: "Shloks", description: "An American Preschool chain." },
-  { mode: "vertical", src: "assets/images/art", title: "Moral Stories", description: "An American Preschool chain." },
-  { mode: "vertical", src: "assets/images/classroom", title: "Songs", description: "An American Preschool chain." },
-  { mode: "vertical", src: "assets/images/colors", title: "Cleanliness", description: "An American Preschool chain." }
+  public thumbnails: Array<any> = [
+  { mode: "horizontal left", src: "assets/images/babysitting.png", title: "Baby sitting", description: " " },
+  { mode: "vertical", src: "assets/images/drawing.jpg", title: "Drawing", description: " " },
+  { mode: "vertical", src: "assets/images/games.jpg", title: "Indian Games", description: " " },
+  { mode: "vertical", src: "assets/images/shlok.png", title: "Shloks", description: " " },
+  { mode: "vertical", src: "assets/images/moralstories.jpg", title: "Moral Stories", description: " " },
+  { mode: "vertical", src: "assets/images/songs.jpg", title: "Songs", description: " " },
+  { mode: "vertical", src: "assets/images/cleanhabbits.png", title: "Cleanliness", description: " " }
   ]; 
   constructor() { }
 

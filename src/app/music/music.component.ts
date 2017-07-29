@@ -16,11 +16,13 @@ import 'rxjs/add/operator/map';
 export class MusicComponent implements OnInit {
 
   public state:string = "home";
-  public thumbnails: Array<any> = [{ mode: "vertical", src: "assets/images/classical.jpg", title: "Classical Music", description: "Classical Music and Ragas." },
-  { mode: "vertical", src: "assets/images/tabala.jpg", title: "Tabala", description: "An American Preschool chain." },
-  { mode: "vertical", src: "assets/images/harmonium.jpg", title: "Harmonium", description: "An American Preschool chain." },
-  { mode: "vertical", src: "assets/images/guitar.jpg", title: "Guitar", description: "An American Preschool chain." },
-  { mode: "vertical", src: "assets/images/katthak.jpg", title: "Katthak", description: "An American Preschool chain." }
+  public thumbnails: Array<any> = [{ mode: "vertical", src: "assets/images/classical.png", title: "Classical Music", description: " " },
+  { mode: "vertical", src: "assets/images/tabala.png", title: "Tabala", description: " " },
+  { mode: "vertical", src: "assets/images/harmonium.png", title: "Harmonium", description: " " },
+  { mode: "vertical", src: "assets/images/guitar.jpg", title: "Guitar", description: " " },
+  { mode: "vertical", src: "assets/images/katthak.png", title: "Katthak", description: " " },
+  { mode: "vertical", src: "assets/images/bharatnatyam.png", title: "Bharatnatyam", description: " " },
+  { mode: "vertical", src: "assets/images/synthesizer.png", title: "Synthesizer", description: " " }
   ]; 
   private tickers: Array<string> = ["Attention: Recording studio with latest technology and quality equipments is now ready!",
       "Authorised exam center for 'Gandhrva' Kala Mahavidyalaya."];

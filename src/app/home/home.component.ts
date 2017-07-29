@@ -11,10 +11,10 @@ import { fadeInAnimation } from '../animations/fade.animation';
 })
 export class HomeComponent implements OnInit {
 
-  public thumbnails: Array<any> = [{ mode: "vertical", href: "school", src: "assets/images/classroom", title: "ABC Montessori", description: "An American Preschool chain." },
-  { mode: "vertical", href: "daycare", src: "assets/images/art", title: "Gayatri Day Care", description: "An American Preschool chain." },
-  { mode: "vertical", href: "music", src: "assets/images/stationary", title: "Brahmanaad Music Academy", description: "An American Preschool chain." },
-  { mode: "vertical", href: "daycare", src: "assets/images/colors", title: "Gayatri Sanskar kendre", description: "An American Preschool chain." }
+  public thumbnails: Array<any> = [{ mode: "vertical", href: "school", src: "assets/images/school_logo.png", title: "ABC Montessori", description: "An American Preschool chain." },
+  { mode: "vertical", href: "daycare", src: "assets/images/daycare_logo.png", title: "Gayatri Day Care", description: "Caring hands ..." },
+  { mode: "vertical", href: "music", src: "assets/images/brahmanaad_logo.png", title: "Brahmanaad Music Academy", description: "Live the Music!" },
+  { mode: "vertical", href: "daycare", src: "assets/images/sanskar_logo.png", title: "Gayatri Sanskar kendre", description: "Shaping tomorrow ..." }
   ]; 
  
   constructor() { }
