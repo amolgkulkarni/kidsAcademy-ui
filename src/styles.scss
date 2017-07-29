@@ -82,3 +82,7 @@ body {margin: 0; background: url(/assets/images/background.jpeg); background-siz
 button {border-radius: 12px; background: #7e54c6; color: white;padding: 6px 29px; border-color: blueviolet;border-width: 1px; outline: 0px;}
 
 p.about{width: 75%; text-align: center; margin: auto; margin-bottom: 10px;}
+
+@media only screen and (max-width: 500px) {
+    .md-col-50 { width: 100% !important;}
+}

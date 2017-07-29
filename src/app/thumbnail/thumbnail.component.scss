@@ -20,3 +20,6 @@ div.horizontal.right .description {text-align: end;}
 div.overlay {display:inline-block; margin: 20px; width: calc(50% - 42px); height: 200px; vertical-align: text-top; background-size: cover !important; cursor: pointer; background-repeat: round;}
 div.overlay p {text-align: center; color: whitesmoke;}
 div.overlay .title {font-weight: bold; margin-top: 60px;}
+
+@media only screen and (max-width: 500px) {
+    div.vertical, div.overlay, div.horizontal img, div.horizontal p { width: 80% !important;}}

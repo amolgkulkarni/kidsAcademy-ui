@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
     nav a {display: inline-block; margin: 20px 20px 20px 0; float: right; color: white;}
     nav img {margin: 5px; width: 50px; height: 50px; border-radius: 5px;}
     nav div:last-child {float: right; border-left: 1px solid #ccc; border-radius: 4px;}
+    @media only screen and (max-width: 500px) {nav a { display: none;}}
   `]
 })
 export class HeaderComponent implements OnInit {
