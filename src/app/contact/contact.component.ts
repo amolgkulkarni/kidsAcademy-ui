@@ -37,7 +37,8 @@ export class ContactComponent implements OnInit {
   sendMail(event){
     var isValid=true, json = {};
     this.formControlComponents.forEach(function(component){
-      if(component.mode == 'text' || component.mode == 'email' || component.mode == 'textarea' || component.mode == 'select'){
+      if(component.mode == 'text' || component.mode == 'email' ||
+      component.mode == 'textarea' || component.mode == 'select' || component.mode == 'telephone'){
         var value = component.getValue();
         if(value === false){
           isValid = false;
