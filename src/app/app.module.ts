@@ -16,6 +16,9 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TickerComponent } from './ticker/ticker.component';
 import { AbcAboutComponent } from './abc-about/abc-about.component';
+import { ModalComponent } from './modal/modal.component';
+import { LoginComponent } from './login/login.component';
+import * as $ from 'jquery';
 
 const routes: Routes = [
   {'path':'', 'redirectTo':'/home', 'pathMatch':'full'},
@@ -39,7 +42,9 @@ const routes: Routes = [
     ContactComponent,
     FormControlComponent,
     TickerComponent,
-    AbcAboutComponent
+    AbcAboutComponent,
+    ModalComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +54,7 @@ const routes: Routes = [
     BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [LoginComponent]
 })
 export class AppModule { }
