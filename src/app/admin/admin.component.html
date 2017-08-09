@@ -1,0 +1,16 @@
+<div [@fadeInAnimation] class="tab">
+  <a class="tab active"> Upload </a>
+  <a class="tab"> Add User </a>
+  <div class="tab-content upload">
+    <form-control name="email" mode="email" placeholder="Email *" required='true'></form-control>
+    <form-control name="pass" mode="text" placeholder="Password *" required='true'></form-control>
+    <br>
+  </div>
+  <div class="tab-content user hide">
+    <form-control name="name" mode="email" placeholder="Email *" required='true'></form-control>
+    <form-control name="email" mode="email" placeholder="Email *" required='true'></form-control>
+    <form-control name="pass" mode="text" placeholder="Password *" required='true'></form-control>
+    <form-control name="admin" mode="select" header="License:" options="User, Admin, Parent"></form-control>
+    <br>
+  </div>
+</div>
