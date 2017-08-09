@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-footer',
   template: `
-        <div class="footer" (dblclick)="loginUser(e)"><span>Copyright © 2017 Kids Academy Pune - All Rights Reserved.</span></div>
+        <div class="footer" (dblclick)="loginUser($event)"><span>Copyright © 2017 Kids Academy Pune - All Rights Reserved.</span></div>
   `,
   styles: [`
     div {height: 40px; font-size: inherit; background: #333; position: fixed; bottom: 0; width:100%;}

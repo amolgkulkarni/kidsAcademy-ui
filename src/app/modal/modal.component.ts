@@ -22,9 +22,9 @@ import { MessageService } from './../message.service';
 
 export class ModalComponent {
 
-  private title: string = '';
-  private accept: string = '';
-  private reject: string = '';
+  title: string = '';
+  accept: string = '';
+  reject: string = '';
   private component;
   message: any;
   subscription: Subscription;
