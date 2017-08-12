@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy, ViewChild, ViewContainerRef, ComponentFac
 
 import { Subscription } from 'rxjs/Subscription';
 import { MessageService } from './../message.service';
-import { FileDropDirective, FileSelectDirective } from 'ng2-file-upload';
 import { fadeInAnimation } from '../animations/fade.animation';
 
 @Component({
