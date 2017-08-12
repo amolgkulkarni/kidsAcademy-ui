@@ -57,6 +57,6 @@ const routes: Routes = [
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [LoginComponent]
+  entryComponents: [LoginComponent, AdminComponent]
 })
 export class AppModule { }

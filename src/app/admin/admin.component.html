@@ -1,16 +1,28 @@
-<div [@fadeInAnimation] class="tab">
-  <a class="tab active"> Upload </a>
-  <a class="tab"> Add User </a>
-  <div class="tab-content upload">
-    <form-control name="email" mode="email" placeholder="Email *" required='true'></form-control>
-    <form-control name="pass" mode="text" placeholder="Password *" required='true'></form-control>
+<div class="tabs">
+  <a [class]="activeTab == 'upload' ? 'active tab':'tab'" (click)="showTab('upload')"> Upload </a>
+  <a [class]="activeTab == 'user' ? 'active tab':'tab'" (click)="showTab('user')"> Add User </a>
+  <div *ngIf="activeTab == 'upload'" class="content">
+    <form #f method="post" action="api/v1/images" enctype="multipart/form-data" target="invisible">
+      <div><span>Title</span><input name="title" type="text"></div>
+      <div><span>Description</span><textarea name="description"></textarea></div>
+      <div><span>Category</span><select name="category">
+        <option *ngFor = "let li of catOptions.split(',');" [value]="li">{{li}}</option>
+      </select></div>
+      <div><span>Sub-Category</span><select name="subcategory">
+        <option *ngFor = "let li of subCatOptions.split(',');" [value]="li">{{li}}</option>
+      </select></div>
+      <div><span>Upload Image</span> <input type="file" name="file" id="file" multiple></div>
+      <button type="submit" id="login-btn" class="btn btn-success" type="button" (click)="uploadFile(f)">Upload Image</button>
+    </form>
     <br>
   </div>
-  <div class="tab-content user hide">
-    <form-control name="name" mode="email" placeholder="Email *" required='true'></form-control>
+  <div *ngIf="activeTab == 'user'" class="content">
+    <form-control name="name" mode="text" placeholder="Name *" required='true'></form-control>
     <form-control name="email" mode="email" placeholder="Email *" required='true'></form-control>
     <form-control name="pass" mode="text" placeholder="Password *" required='true'></form-control>
-    <form-control name="admin" mode="select" header="License:" options="User, Admin, Parent"></form-control>
+    <form-control name="license" mode="select" header="License: " options="User,Admin,Parent"></form-control>
+    <form-control mode="action" placeholder="ADD USER" (submit)="addUser()"></form-control>
     <br>
   </div>
 </div>
+<iframe id=invisible name="invisible" style="display: none;"></iframe>

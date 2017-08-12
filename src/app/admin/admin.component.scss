@@ -1,0 +1,19 @@
+.tabs {}
+.tabs .tab {
+        padding: 3px 10px;
+    border-bottom: 3px solid #ccc;}
+.tabs .tab.active {
+    border-bottom: 3px solid #7e54c6;
+}
+.tabs .content {padding-top: 10px;}
+
+.tabs .content button{width: 85%;}
+
+form div {padding: 10px;}
+form div input, form div textarea, form div select  {
+    padding: 10px;
+    margin: 5px 10px;
+    width: 50%;
+    vertical-align: middle;
+}
+.form-control.info span, .form-control.select span{width: auto; max-width: 40%; overflow: hidden; font-weight: 700; display: inline;}

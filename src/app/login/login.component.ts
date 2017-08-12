@@ -3,21 +3,20 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { AfterViewInit, ViewChildren, QueryList } from '@angular/core';
 import { FormControlComponent } from './../form-control/form-control.component';
 import 'rxjs/add/operator/map';
-import { fadeInAnimation } from '../animations/fade.animation';
+import { MessageService } from './../message.service';
+import { AdminComponent } from './../admin/admin.component'
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
-  animations: [fadeInAnimation],
-  host: { '[@fadeInAnimation]': '' }
+  styleUrls: ['./login.component.scss']
 })
 
 export class LoginComponent implements OnInit {
   @ViewChildren(FormControlComponent)
   private formControlComponents: QueryList<FormControlComponent>;
 
-  constructor(private http: Http) { }
+  constructor(private messageService: MessageService, private http: Http) { }
 
   ngOnInit() {
   }
@@ -52,7 +51,7 @@ export class LoginComponent implements OnInit {
         if(msg.error){
           alert('Login Failed. Try again!')
         } else {
-          alert('Thanks for showing interest. We will get back within 48 hours.')
+          this.messageService.sendMessage({ title: 'Admin', mode: 'large', component: AdminComponent });
         }
       },
       error => {

@@ -2,22 +2,26 @@ import { Component, OnInit, OnDestroy, ViewChild, ViewContainerRef, ComponentFac
 
 import { Subscription } from 'rxjs/Subscription';
 import { MessageService } from './../message.service';
+import { FileDropDirective, FileSelectDirective } from 'ng2-file-upload';
+import { fadeInAnimation } from '../animations/fade.animation';
 
 @Component({
   selector: 'app-modal',
   template: `
-    <div class="app-modal hide wrapper" (click)="hideModal($event)">
-      <div class="content" (click)="$event.stopPropagation()">
+    <div [@fadeInAnimation] class="app-modal hide wrapper" (click)="hideModal($event)">
+      <div [class]="'content ' + mode " (click)="$event.stopPropagation()">
         <div class="title">{{title}}</div>
-        <div class="main-content">
+        <div [class]="(reject || accept) ? 'main-content wfooter' : 'main-content'">
         <ng-template #dynamic></ng-template></div>
-        <div class="footer">
-          <button class="accept" (click)="hideModal('accept')">{{accept}}</button>
-          <button class="reject" (click)="hideModal('reject')">{{reject}}</button></div>
+        <div *ngIf="reject || accept" class="footer">
+          <button *ngIf="accept" class="accept" (click)="hideModal('accept')">{{accept}}</button>
+          <button *ngIf="reject" class="reject" (click)="hideModal('reject')">{{reject}}</button></div>
       </div>
     </div>
   `,
-  styleUrls: ['./modal.component.scss']
+  styleUrls: ['./modal.component.scss'],
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' }
 })
 
 export class ModalComponent {
@@ -25,6 +29,7 @@ export class ModalComponent {
   title: string = '';
   accept: string = '';
   reject: string = '';
+  mode: string = '';
   private component;
   message: any;
   subscription: Subscription;
@@ -44,6 +49,7 @@ export class ModalComponent {
     this.title = data.title || 'Modal';
     this.accept = data.accept;
     this.reject = data.reject;
+    this.mode = data.mode || '';
     jQuery('.app-modal.wrapper').removeClass('hide');
     this.addDynamicComponent(data.component);
   }

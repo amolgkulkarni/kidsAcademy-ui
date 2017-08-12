@@ -23,6 +23,7 @@
 .app-modal .content.medium{height: 50%; top: 25%;}
 .app-modal .content.large{height: 75%; top: 12%;}
 
-.app-modal .content .title {border-bottom: 1px solid #777; height: 40px;}
-.app-modal .content .main-content {height: calc(100% - 80px);overflow: auto;}
+.app-modal .content .title {border-bottom: 1px solid #777; height: 40px;text-align: center; font-size: x-large;}
+.app-modal .content .main-content {height: calc(100% - 40px);overflow: auto;}
+.app-modal .content .main-content.wfooter {height: calc(100% - 80px);}
 .app-modal .content .footer {height: 40px;padding-top: 10px; float: right;}

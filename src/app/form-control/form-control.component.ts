@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'form-control',
@@ -15,10 +15,13 @@ export class FormControlComponent implements OnInit {
   @Input() public description: string;
   @Input() public required: boolean;
   value: string = '';
+  element: any;
   css_class = '';
 
-  @Output() submit: EventEmitter<any> = new EventEmitter();
-  constructor() {}
+ @Output() submit: EventEmitter<any> = new EventEmitter();
+  constructor(element: ElementRef) {
+    this.element = element
+  }
 
   ngOnInit() {
     //this.css_class = this.required ? ' error' : '';
@@ -26,6 +29,9 @@ export class FormControlComponent implements OnInit {
   }
   
   validate(event){
+    if(this.mode == 'file'){
+      this.value = jQuery(this.element.nativeElement.querySelector("#file")).prop('files')[0];
+    }
     if(this.required && !this.value){
         this.css_class += ' error';
         return false;

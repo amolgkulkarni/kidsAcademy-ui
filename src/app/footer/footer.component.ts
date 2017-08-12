@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { MessageService } from './../message.service';
 import { LoginComponent } from './../login/login.component'
+import { AdminComponent } from './../admin/admin.component'
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
@@ -29,6 +30,8 @@ export class FooterComponent implements OnInit {
     this.getData('login').subscribe(msg => {
       if (msg.data == 'timeout' || msg.data == 'logout') {
         this.messageService.sendMessage({ title: 'Login', accept: 'Login', reject: 'Cancel', component: LoginComponent });
+      } else if (msg.data) {
+        this.messageService.sendMessage({ title: 'Admin', mode: 'large', component: AdminComponent });
       }
     });
   }
