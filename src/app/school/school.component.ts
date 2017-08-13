@@ -66,8 +66,8 @@ export class SchoolComponent implements OnInit {
     switchTo(subroute) {
         this.state = subroute;
         if (subroute == 'gallery') {
-            this.getData('api/v1/images/school/material').subscribe(data => { this.materialGallery = data; console.log(data); });
-            this.getData('api/v1/images/school/activities').subscribe(data => { this.gallery = data; console.log(data); });
+            this.getData('api/v1/images/school/material').subscribe(data => { this.materialGallery = data;});
+            this.getData('api/v1/images/school/activities').subscribe(data => { this.gallery = data;});
         }
     }
 }

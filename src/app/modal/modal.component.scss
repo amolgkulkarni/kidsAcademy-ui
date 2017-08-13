@@ -9,7 +9,9 @@
 }
 .app-modal .content{
     width:50%;
+    min-width: 300px;
     height: 25%;
+    min-height: 300px;
     top:38%;
     left:25%;
     color: #000;
@@ -27,3 +29,12 @@
 .app-modal .content .main-content {height: calc(100% - 40px);overflow: auto;}
 .app-modal .content .main-content.wfooter {height: calc(100% - 80px);}
 .app-modal .content .footer {height: 40px;padding-top: 10px; float: right;}
+
+@media only screen and (max-width: 500px) {
+ .app-modal .content {
+     width: 80%;
+     left: 10%;
+     height:80%;
+     top: 10%;
+ }   
+}
